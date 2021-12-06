@@ -83,7 +83,7 @@ class TrailsDataTable extends DataTable
         return $this->builder()
                    // ->autoWidth(false)
                     ->setTableId('trails-table')
-                   // ->columns($this->getColumns())
+                    ->columns($this->getColumns())
             
                     ->minifiedAjax()
                     ->orderBy(0)
@@ -144,29 +144,30 @@ class TrailsDataTable extends DataTable
                        
 
                     ) 
-                    ->columns([
+                    // ->columns([
     
-                        ['data' => 'id', 'name' => 'id', 'title' => 'م','width'=>'0%'],
-                        ['data' => 'national_number', 'name' => 'national_number', 'title' => 'رقم قومى','width'=>'8%'],
-                        ['data' => 'complained', 'name' => 'complained', 'title' => 'الجهه المشكو بها','width'=>'8%'],
-                        ['data' => 'phone_number', 'name' => 'phone_number', 'title' => 'الهاتف','width'=>'6%'],
-                        ['data' => 'complainer_name', 'name' => 'complainer_name', 'title' => 'اسم الشاكى','width'=>'8%'],
-                        ['data' => 'created_at', 'name' => 'created_at', 'title' => 'تاريخ الاضافة'],
+                    //     ['data' => 'id', 'name' => 'id', 'title' => 'م','width'=>'0%'],
+                    //     ['data' => 'national_number', 'name' => 'national_number', 'title' => 'رقم قومى','width'=>'8%'],
+                    //     ['data' => 'complained', 'name' => 'complained', 'title' => 'الجهه المشكو بها','width'=>'8%'],
+                    //     ['data' => 'phone_number', 'name' => 'phone_number', 'title' => 'الهاتف','width'=>'6%'],
+                    //     ['data' => 'complainer_name', 'name' => 'complainer_name', 'title' => 'اسم الشاكى','width'=>'8%'],
+                    //     ['data' => 'created_at', 'name' => 'created_at', 'title' => 'تاريخ الاضافة'],
 
 
-                        ['data' => 'procedure', 'name' => 'procedure', 'title' => 'الاجراءت'],
+                    //     ['data' => 'procedure', 'name' => 'procedure', 'title' => 'الاجراءت'],
     
-                        ['data' => 'behave', 'name' => 'behave', 'title' => 'التصرف'],
+                    //     ['data' => 'behave', 'name' => 'behave', 'title' => 'التصرف'],
     
-                        ['data' => 'note', 'name' => 'note', 'title' => 'ملاحظات'],
-                        ['data' => 'action', 'name' => 'action', 'title' => 'عمليات'  ,'width'=>'6%'],
+                    //     ['data' => 'note', 'name' => 'note', 'title' => 'ملاحظات'],
+                    //     ['data' => 'action', 'name' => 'action', 'title' => 'عمليات'  ,'width'=>'6%'],
 
                      
                   
                         
                       
                 
-                    ]);
+                    // ])
+                    ;
     }
   
     /**
@@ -178,23 +179,37 @@ class TrailsDataTable extends DataTable
     {
         return [
            
-            
+                    //     ['data' => 'complained', 'name' => 'complained', 'title' => 'الجهه المشكو بها','width'=>'8%'],
+                    //     ['data' => 'complainer_name', 'name' => 'complainer_name', 'title' => 'اسم الشاكى','width'=>'8%'],
+                    //     ['data' => 'created_at', 'name' => 'created_at', 'title' => 'تاريخ الاضافة'],
+
+
+                    //     ['data' => 'procedure', 'name' => 'procedure', 'title' => 'الاجراءت'],
+    
+                    //     ['data' => 'behave', 'name' => 'behave', 'title' => 'التصرف'],
+    
+                    //     ['data' => 'note', 'name' => 'note', 'title' => 'ملاحظات'],
+                    //     ['data' => 'action', 'name' => 'action', 'title' => 'عمليات'  ,'width'=>'6%'],
+
            Column::make('id')->title("رقم"),
 
             Column::make('national_number')->title(" رقم قومى"),
             Column::make('complained')->title("الجهه المشكو بها"),
             Column::make('phone_number')->title("الهاتف"),
+            Column::make('complainer_name')->title("اسم الشاكى"),
+            Column::make('created_at')->title("تاريخ الاضافة"),
+
             Column::make('procedure')->title("الاجراءت"),
            Column::make( 'behave')->title("التصرف"),
          
-          
+           Column::make('note')->title("ملاحظات"),
+
     // Column::make('updated_at')->title("تاريخ التعديل"),
            
             Column::computed('action')
             ->title(" عمليات")
-            ->searchable(false),
-            Column::make('note')->title("ملاحظات"),
-            Column::make('created_at')->title("تاريخ الاضافة"),
+            ->searchable(false)
+            ->printable(false),
 
         ];
     }

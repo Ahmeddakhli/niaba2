@@ -13,34 +13,34 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{ asset('googleapis') }}" rel="stylesheet">
  
  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {{ asset('bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bootstrap.rtl.min.css') }}" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
 
-    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="{{ asset('jquery.dataTables.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="{{ asset('responsive.dataTables.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('responsive.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('jquery.fancybox.min.css')}}" media="screen">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="{{ asset('jquery.js')}}"></script>  
+    <script src="{{ asset('jquery.fancybox.min.js')}}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
+    <script src="{{ asset('jquery.validate.js')}}"></script>
+    <script src="{{ asset('jquery.dataTables.min.js')}}"></script>
+    <script src="{{ asset('bootstrap4.min.js')}}"></script>
+    <script src="{{ asset('dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{ asset('dataTables.buttons.min.js')}}"></script>
 
- <script src="https://cdn.datatables.net/rowreorder/1.2.7/js/dataTables.rowReorder.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
+ <script src="{{ asset('dataTables.rowReorder.min.js')}}"></script>
+<script src="{{ asset('dataTables.responsive.min.js')}}"></script>
+<script src="{{ asset('responsive.bootstrap4.min.js')}}"></script>
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="{{ asset('buttons.dataTables.min.css')}}">
     <script src="/vendor/datatables/buttons.server-side.js"></script>
  
 </head>
